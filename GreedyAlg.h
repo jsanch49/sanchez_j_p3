@@ -16,11 +16,13 @@ class GreedyAlg {
     int capacity;
     std::pair<int, int> * items; // <weight, profit>
     int maxProfit;
-    double seconds;
+    int ms;
     int GreedyAlg1();
     int GreedyAlg2();
     int BacktrackAlg();
+    void BTHelper(int, int, int);
     void sortItems();
+    int bound(int profit, int w, int i);
   public:
     GreedyAlg(int _num, int _cap, std::pair<int, int> * _items) : numItems(_num), capacity(_cap), items(_items) {};
     void computeKnapSack(int option);
